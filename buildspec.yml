@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+       - zip -r ansible.zip *
+       - aws s3 cp ansible.zip s3://ansible-artifact-05/
